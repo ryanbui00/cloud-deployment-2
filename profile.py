@@ -11,10 +11,9 @@ import geni.rspec.pg as pg
 # Create a portal context.
 pc = portal.Context()
 
-link = request.LAN("lan")
-
 # Create a Request object to start building the RSpec.
 request = pc.makeRequestRSpec()
+link = request.LAN("lan")
 for i in range(0,4):
     node = request.XenVM(str("Node-") + str(i+1))
     iface = node.addInterface("if" + str(i+1))
