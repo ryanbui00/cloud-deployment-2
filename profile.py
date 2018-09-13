@@ -19,7 +19,7 @@ for i in range(0,4):
     iface = node.addInterface("if" + str(i+1))
     node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
     iface.component_id = "eth1"
-    iface.addAddress(pg.IPv4Address("192.168.1."+str(k+1),"255.255.255.0"))
+    iface.addAddress(pg.IPv4Address("192.168.1."+str(i+1),"255.255.255.0"))
     
     link.addInterface(iface)
     if (i == 0):
