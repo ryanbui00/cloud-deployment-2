@@ -8,9 +8,10 @@ Wait for the profile instance to start, then click on the node in the topology a
 #Import the Portal object.
 import geni.portal as portal
 import geni.rspec.pg as pg
-link = request.LAN("lan")
 # Create a portal context.
 pc = portal.Context()
+
+link = request.LAN("lan")
 
 # Create a Request object to start building the RSpec.
 request = pc.makeRequestRSpec()
